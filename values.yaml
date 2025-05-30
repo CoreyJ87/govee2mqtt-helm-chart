@@ -1,0 +1,44 @@
+replicaCount: 1
+
+image:
+  repository: wezfurlong/govee2mqtt
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 8056
+
+# Environment variables for govee2mqtt
+env:
+  GOVEE_EMAIL: ""
+  GOVEE_PASSWORD: ""
+  GOVEE_API_KEY: ""
+  GOVEE_MQTT_HOST: "mosquitto.mosquitto.svc.cluster.local"
+  GOVEE_MQTT_PORT: "1883"
+  GOVEE_MQTT_USER: ""
+  GOVEE_MQTT_PASSWORD: ""
+  GOVEE_TEMPERATURE_SCALE: "C"
+  RUST_LOG_STYLE: "always"
+  RUST_LOG: "info"
+  TZ: "America/Chicago"
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "200m"
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  runAsGroup: 1000
+
+nodeSelector: {}
+tolerations: []
+affinity: {} 

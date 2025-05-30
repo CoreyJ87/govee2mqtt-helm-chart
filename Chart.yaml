@@ -1,0 +1,18 @@
+apiVersion: v2
+name: govee2mqtt
+description: Govee to MQTT Bridge - Connect Govee devices to MQTT
+type: application
+version: 0.1.0
+appVersion: "latest"
+keywords:
+  - govee
+  - mqtt
+  - smart-home
+  - iot
+  - home-automation
+home: https://github.com/wez/govee2mqtt
+sources:
+  - https://github.com/wez/govee2mqtt
+maintainers:
+  - name: Your Name
+    email: your-email@example.com
