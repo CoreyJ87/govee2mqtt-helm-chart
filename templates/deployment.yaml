@@ -26,8 +26,10 @@ spec:
               protocol: TCP
           env:
             {{- range $key, $value := .Values.env }}
+            {{- if ne $value "" }}
             - name: {{ $key }}
               value: {{ $value | quote }}
+            {{- end }}
             {{- end }}
           {{- if .Values.envFrom }}
           envFrom:
