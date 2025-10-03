@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: image.repository
+    value: ghcr.io/wez/govee2mqtt
+    forcestring: true
+  - name: image.tag
+    value: latest@sha256:6970ea68b0c6ff4ef6d4e63424e46f38b8fa2ec29e9578f9d6136fefe08a08a7
+    forcestring: true
