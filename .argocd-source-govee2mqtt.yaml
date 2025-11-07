@@ -4,5 +4,5 @@ helm:
     value: ghcr.io/wez/govee2mqtt
     forcestring: true
   - name: image.tag
-    value: latest@sha256:f333e559ec49c5745c4d817caa3862a1b52f7bd9ad7823cf1ec2236041f5e7c5
+    value: latest@sha256:ed70375179bf621076ee9c53d98bafd40c37c9971f308676d29123ed06be2bed
     forcestring: true
